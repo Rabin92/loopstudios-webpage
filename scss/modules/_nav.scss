@@ -1,0 +1,61 @@
+// ==========================================================================
+// Menu
+// ==========================================================================
+
+.nav-mob {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  background: $color-primary;
+  display: none;
+  animation: fadeIn 1s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+
+  @include e(container) {
+    @include flexy();
+    height: 100vh;
+  }
+
+  @include e(list) {
+    color: $color-links;
+    padding: $gutters;
+  }
+
+  @include e(item) {
+    text-transform: uppercase;
+    margin-bottom: em(12px);
+    font-size: em(25px);
+    cursor: $cursor;
+  }
+}
+
+.nav-desk {
+  font-family: $font-family--secondary;
+  color: $color-links;
+  display: none;
+  position: relative;
+  cursor: $cursor;
+  height: 35px;
+
+  @media #{$break--s} {
+    display: block;
+  }
+
+  @include e(item) {
+    display: inline-block;
+    margin-right: em(20px);
+
+    @include hover();
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

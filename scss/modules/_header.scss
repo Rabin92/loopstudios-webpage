@@ -1,0 +1,52 @@
+// ==========================================================================
+// Header
+// ==========================================================================
+
+.header {
+  padding: $gutters;
+
+  @include e(content) {
+    @include flexy($j-content: space-between);
+    margin-top: em(30px);
+  }
+
+  @include e(container) {
+    @include flexy();
+    color: $white;
+    text-transform: uppercase;
+    height: em(450px);
+    position: relative;
+  }
+
+  @include e(site-logo) {
+    z-index: 3;
+  }
+
+  @include e(title) {
+    line-height: 1.2em;
+    border: 1px solid $white;
+    padding: 0.45em;
+    font-size: em(35px);
+
+    @media #{$break--s} {
+      font-size: em(45px);
+      padding: 0.55em;
+      max-width: 400px;
+    }
+
+    @media #{$break--m} {
+      font-size: em(60px);
+      padding: 0.35em;
+      max-width: 700px;
+    }
+  }
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: $overlay;
+}

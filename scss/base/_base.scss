@@ -1,0 +1,64 @@
+// ==========================================================================
+// Base Styles
+// ==========================================================================
+
+* {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-family--primary;
+  font-weight: $font-weight--light;
+  font-size: $base__font-size;
+  line-height: ($base__line/$base__font-size);
+  position: relative;
+}
+
+// Header
+
+header {
+  background: $white url('#{$path--rel}/mobile/image-hero.jpg') no-repeat;
+  background-size: cover;
+  height: 85vh;
+  position: relative;
+
+  @media #{$break--s} {
+    background: $white url('#{$path--rel}/desktop/image-hero.jpg') no-repeat;
+    background-size: cover;
+    height: 560px;
+    background-position: 50% 50%;
+  }
+}
+
+// Text
+
+h2 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: $white;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+// Lists
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+// Button
+
+button {
+  outline: 0;
+  border: none;
+}

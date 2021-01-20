@@ -1,0 +1,77 @@
+// ==========================================================================
+// Footer
+// ==========================================================================
+
+.footer {
+  @media #{$break--m} {
+    @include flexy($j-content: space-around);
+  }
+  background: $color-primary;
+  margin-top: em(60px);
+  padding: 1.5em;
+
+  @include e(links) {
+    @include flexy($f-dir: column);
+    margin-bottom: em(30px);
+
+    @media #{$break--m} {
+      @include flexy($dsp: revert, $a-items: null);
+      margin-bottom: revert;
+    }
+  }
+
+  @include e(site-logo) {
+    margin: em(30px) em(0px);
+
+    @media #{$break--m} {
+      margin: 0.45em 0em;
+    }
+  }
+
+  @include e(list) {
+    color: $color-links;
+    font-family: $font-family--secondary;
+
+    @media #{$break--m} {
+      height: 4vh;
+    }
+  }
+
+  @include e(item) {
+    @media #{$break--m} {
+      @include hover();
+    }
+
+    padding-bottom: em(10px);
+    cursor: $cursor;
+
+    @media #{$break--m} {
+      display: inline-block;
+      margin-right: em(20px);
+    }
+  }
+
+  @include e(icons) {
+    text-align: $text--center;
+
+    @media #{$break--m} {
+      text-align: right;
+    }
+  }
+
+  @include e(social-icons) {
+    display: inline-block;
+    padding-left: em(15px);
+    cursor: $cursor;
+
+    @media #{$break--m} {
+      @include hover();
+      height: 1vh;
+    }
+  }
+
+  @include e(copyright) {
+    font-family: $font-family--secondary;
+    color: $color-card-text;
+  }
+}

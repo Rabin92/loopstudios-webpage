@@ -1,0 +1,58 @@
+// ==========================================================================
+// Mixins
+// ==========================================================================
+
+// BEM selectors
+
+@mixin e($element) {
+  &__#{$element} {
+    @content;
+  }
+}
+@mixin m($modifier) {
+  &--#{$modifier} {
+    @content;
+  }
+}
+
+// Flex
+
+@mixin flexy($dsp: flex, $f-dir: null, $j-content: null, $a-items: center) {
+  display: $dsp;
+  flex-direction: $f-dir;
+  justify-content: $j-content;
+  align-items: $a-items;
+}
+
+// btn
+
+@mixin btn() {
+  font-family: $font-family--secondary;
+  font-weight: $font-weight--medium;
+  padding: em(5px);
+  background: $white;
+  border: 1px solid $color-primary;
+  width: 45%;
+  text-transform: uppercase;
+  letter-spacing: 0.187em;
+
+  &:hover {
+    background: $color-primary;
+    color: $white;
+    border: 2px solid $white;
+    transition: all 0.55s ease-in-out;
+  }
+}
+
+@mixin hover() {
+  &:hover {
+    &::after {
+      content: '';
+      display: block;
+      margin: 0 auto;
+      width: 50%;
+      padding-top: 0.4rem;
+      border-bottom: 2px solid $white;
+    }
+  }
+}

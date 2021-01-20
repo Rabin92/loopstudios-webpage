@@ -1,0 +1,136 @@
+// ==========================================================================
+// Section
+// ==========================================================================
+
+.section {
+  padding: $gutters;
+  margin-bottom: em(30px);
+  margin-top: em(100px);
+
+  @include e(title) {
+    @extend %section;
+    margin-top: em(15px);
+
+    @media #{$break--m} {
+      font-size: 2.2rem;
+    }
+
+    @media #{$break--l} {
+      font-size: 3rem;
+    }
+  }
+
+  @include e(container) {
+    text-align: $text--center;
+
+    @media #{$break--l} {
+      position: relative;
+      text-align: unset;
+    }
+  }
+
+  @include e(body) {
+    @media #{$break--l} {
+      width: 38rem;
+      position: absolute;
+      background: $white;
+      padding: 2rem;
+      right: 0;
+      bottom: 0;
+    }
+  }
+
+  @include e(content) {
+    font-family: $font-family--secondary;
+    color: $color-secondary;
+  }
+}
+
+// ==========================================================================
+// Card
+// ==========================================================================
+
+.card {
+  padding: $gutters;
+
+  @include e(title) {
+    @extend %section;
+    text-align: $text--center;
+    margin-bottom: em(10px);
+
+    @media #{$break--s} {
+      text-align: revert;
+      margin-bottom: unset;
+    }
+  }
+
+  @include e(body) {
+    position: relative;
+    margin-bottom: em(20px);
+    cursor: $cursor;
+
+    @media #{$break--s} {
+      margin-bottom: unset;
+    }
+  }
+
+  @include e(name) {
+    color: $white;
+    padding-left: em(10px);
+    font-size: em(25px);
+    text-transform: uppercase;
+    position: absolute;
+    top: -10px;
+    max-width: 145px;
+
+    @media #{$break--s} {
+      top: unset;
+      bottom: 10px;
+    }
+  }
+
+  @include e(overlay) {
+    position: absolute;
+    background: $overlay;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 8px;
+
+    &:hover {
+      background: $color-secondary;
+      opacity: 0.6;
+    }
+
+    @media #{$break--s} {
+      max-width: 256px;
+    }
+  }
+
+  @include e(header) {
+    @media #{$break--s} {
+      @include flexy($j-content: space-between);
+      margin-bottom: em(40px);
+    }
+  }
+
+  @include e(btn) {
+    display: none;
+
+    @media #{$break--s} {
+      display: block;
+      margin-right: 22px;
+      max-width: 150px;
+
+      @include btn();
+    }
+  }
+}
+
+.grid-container {
+  @media #{$break--s} {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-gap: 10px;
+  }
+}

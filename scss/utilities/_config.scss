@@ -1,0 +1,56 @@
+// ==========================================================================
+// Global Config
+// ==========================================================================
+
+// Font Stacks
+
+$font-url--primary: 'https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap';
+$font-family--primary: 'Josefin Sans', sans-serif;
+
+$font-url--secondary: 'https://fonts.googleapis.com/css2?family=Alata&display=swap';
+$font-family--secondary: 'Alata', sans-serif;
+
+// Font Weights
+
+$font-weight--light: 300;
+$font-weight--medium: 400;
+
+// Descriptive Base Colors
+
+$white: #fff;
+$black: #000;
+$gray: #8c8c8c;
+$dove-gray: #696969;
+
+// Color Usage
+
+$color-primary: $black;
+$color-secondary: $gray;
+$color-card-text: $dove-gray;
+$color-links: $white;
+
+// Text
+
+$base__font-size: 15px;
+$base__line: 24px;
+$text--center: center;
+
+// Path to Assets
+
+$path--rel: '../images';
+
+// Gutters
+$gutters: 1em;
+
+// Cursor
+
+$cursor: pointer;
+
+// Overlay
+
+$overlay: rgba(0, 0, 0, 0.4);
+
+// Media queries
+$break--s: '(min-width: 600px)';
+$break--m: '(min-width: 768px)';
+$break--l: '(min-width: 1024px)';

@@ -1,0 +1,17 @@
+// ==========================================================================
+// Placeholders
+// ==========================================================================
+
+// Example
+
+%menu {
+  border: 1px solid $white;
+  width: 25px;
+  transition: all 0.4s ease-in-out;
+  cursor: $cursor;
+}
+
+%section {
+  text-transform: uppercase;
+  font-size: em(30px);
+}
